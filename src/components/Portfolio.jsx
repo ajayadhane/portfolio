@@ -1,14 +1,16 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Home";
+import Homepage from "./Homepage";
+import Navbar from "./Navbar";
 export default function Portfolio() {
   return (
-    <>
+    <div className="mainStyle">
       <BrowserRouter>
+        <Navbar />
         <Routes>
-          <Route path="/" Component={<Home />} />
+          <Route path="/" element={<Homepage />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
