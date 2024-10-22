@@ -1,35 +1,43 @@
-import React from "react";
-import logo from "../assets/images/portfolio_logo.gif";
+import React, { useState } from "react";
+import "../Portfolio.css";
+import profile_logo from "../assets/images/profile_logo.jpg";
 import { Link } from "react-router-dom";
-export default function Navbar() {
+import MenuItems from "./MenuItems";
+
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = (e) => {
+    if (e.target.tagName === "A") {
+      setMenuOpen(false);
+    }
+  };
+
   return (
-    <div className="container-fluid" id="Navbar">
-      <div className="row">
-        <div className="col-12">
-          <nav>
-            <div className="forLogo">
-              <img src={logo} alt="Logo.." className="img-fluid forLogoStyle" />
-            </div>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/">Experience</Link>
-              </li>
-              <li>
-                <Link to="/">Skills</Link>
-              </li>
-              <li>
-                <Link to="/">Projects</Link>
-              </li>
-              <li>
-                <Link to="/">Contact</Link>
-              </li>
-            </ul>
-          </nav>
+    <>
+      <nav onClick={closeMenu}>
+        <div className="logo">
+          <Link to="/">
+            <img className="image" src={profile_logo} alt="Profile Logo" />
+          </Link>
         </div>
-      </div>
-    </div>
+        <ul id="menuList" className={menuOpen ? "open" : ""}>
+          <MenuItems to="/">Home</MenuItems>
+          <MenuItems to="/about">About</MenuItems>
+          <MenuItems to="/skills">Skills</MenuItems>
+          <MenuItems to="/projects">Projects</MenuItems>
+          <MenuItems to="/contact">Contact</MenuItems>
+        </ul>
+        <div className="menu-icon" onClick={toggleMenu}>
+          <i className="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </>
   );
-}
+};
+
+export default Navbar;
