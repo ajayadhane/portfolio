@@ -1,15 +1,64 @@
 import React from "react";
-import { Element } from "react-scroll";
+import { TypeAnimation } from "react-type-animation";
+import Portfolio_img from "../assets/images/vector-img.png";
+import ResumeDownloader from "../components/child_components/ResumeDownloader";
+import SocialIcons from "../components/child_components/SocialIcons";
 
-const Home = () => {
+const name = "Ajay Adhane";
+const designation = "React.js Developer";
+
+export default function HomeSection() {
   return (
-    <Element name="home">
-      <section>
-        <h2>Home Section</h2>
-        <p>This is the Home section content.</p>
-      </section>
-    </Element>
-  );
-};
+    <div className="container-fluid" id="homeSection">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 d-flex align-items-center justify-content-center p-3">
+            <div>
+              <div className="typing-effect">
+                <h2>Hi,I am Ajay</h2>
+                <span className="text-effect">I'm</span>
+                <TypeAnimation
+                  className="TypeAnimation"
+                  sequence={[
+                    "React.js Developer",
+                    2000,
+                    "Frontend Developer",
+                    2000,
+                    "Web Developer",
+                    2000,
+                    "Next.js Developer",
+                    2000,
+                  ]}
+                  speed={50}
+                  deletionSpeed={30}
+                  repeat={Infinity}
+                />
+                <h2>
+                  Welcome to my portfolio! Explore my projects and skills.
+                </h2>
+                <>
+                  <ResumeDownloader />
+                </>
+              </div>
+            </div>
+          </div>
 
-export default Home;
+          <div className="col-md-6 d-flex align-items-center justify-content-center p-3">
+            <figure className="profile">
+              <div className="overlay">
+                <div className="about">
+                  <h4>{name}</h4>
+                  <span>{designation}</span>
+                </div>
+                <>
+                  <SocialIcons />
+                </>
+              </div>
+              <img src={Portfolio_img} alt="Portfolio" className="img-fluid" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
