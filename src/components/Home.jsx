@@ -15,8 +15,8 @@ export default function HomeSection() {
           <div className="col-md-6 d-flex align-items-center justify-content-center p-3">
             <div>
               <div className="typing-effect">
-                <h2>Hi,I am Ajay</h2>
-                <span className="text-effect">I'm</span>
+                <h2>Welcome! I’m Ajay,</h2>
+                <span className="text-effect">I’m</span>
                 <TypeAnimation
                   className="TypeAnimation"
                   sequence={[
@@ -33,9 +33,7 @@ export default function HomeSection() {
                   deletionSpeed={30}
                   repeat={Infinity}
                 />
-                <h2>
-                  Welcome to my portfolio! Explore my projects and skills.
-                </h2>
+                <h2>Let’s explore my work together!</h2>
                 <>
                   <ResumeDownloader />
                 </>
