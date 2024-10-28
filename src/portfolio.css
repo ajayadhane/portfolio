@@ -464,3 +464,122 @@ section {
         }
     }
 }
+
+
+/* footer css */
+
+.footer-container {
+    background: transparent;
+    position: relative;
+    padding: 20px;
+    color: #fff;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.background-element {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #1a706a;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.background-element:first-of-type {
+    top: -20px;
+    left: 20px;
+    transform: rotate(180deg);
+}
+
+.background-element:last-of-type {
+    bottom: -20px;
+    right: 20px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.glass-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    color: aqua;
+    width: 250px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: radial-gradient(circle, rgba(65, 144, 171, 0.5) 0%, rgba(0, 201, 255, 0) 70%);
+    z-index: -1;
+    filter: blur(20px);
+}
+
+.glass-card:hover {
+    transform: scale(1.05);
+}
+
+.glass-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.glass-card p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .glass-card {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .glass-card {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+
+    .glass-card h3 {
+        font-size: 1.2em;
+    }
+
+    .glass-card p {
+        font-size: 0.9em;
+    }
+}
