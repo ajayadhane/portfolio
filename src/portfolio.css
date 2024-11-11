@@ -139,7 +139,7 @@ section {
 @media (max-width:768px) {
     nav ul {
         position: absolute;
-        top: 70px;
+        top: 60px;
         left: 0;
         right: 0;
         z-index: 1000;
@@ -467,6 +467,9 @@ section {
 
 
 /* footer css */
+body, .footer-container {
+    overflow-x: hidden;
+}
 
 .footer-container {
     background: transparent;
@@ -478,6 +481,9 @@ section {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-top: 1px solid #0a3b2b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .footer-content {
@@ -488,9 +494,9 @@ section {
 
 .background-element {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    background: #1a706a;
+    width: 100px;
+    height: 100px;
+    background: #154e2e7a;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     opacity: 0.7;
     z-index: 1;
@@ -553,6 +559,7 @@ section {
 }
 
 .glass-card p {
+    font-family: "Roboto", sans-serif;
     margin: 5px 0;
     font-size: 1em;
 }
