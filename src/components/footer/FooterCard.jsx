@@ -3,13 +3,9 @@ import React from "react";
 const FooterCard = () => {
   return (
     <div className="cards-container">
-      <span className="lightStyle"></span>
       <div className="glass-card">
         <h3>Address</h3>
-        <p>
-          Warje,Pune Maharashtra 411052,
-          India
-        </p>
+        <p>Warje,Pune Maharashtra 411052, India</p>
       </div>
       <div className="glass-card">
         <h3>Email</h3>

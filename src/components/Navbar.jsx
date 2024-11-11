@@ -27,7 +27,6 @@ const Navbar = () => {
         </div>
         <ul id="menuList" className={menuOpen ? "open" : ""}>
           <MenuItems to="/">Home</MenuItems>
-          <MenuItems to="/about">About</MenuItems>
           <MenuItems to="/skills">Skills</MenuItems>
           <MenuItems to="/projects">Projects</MenuItems>
           <MenuItems to="/contact">Contact</MenuItems>

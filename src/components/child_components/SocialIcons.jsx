@@ -5,13 +5,13 @@ export default function SocialIcons() {
     <>
       <ul className="social-icons">
         <li>
-          <i className="fa fa-facebook"></i>
-        </li>
-        <li>
           <i className="fa fa-linkedin"></i>
         </li>
         <li>
-          <i className="fa fa-twitter"></i>
+          <i class="fa-brands fa-github"></i>
+        </li>
+        <li>
+          <i className="fa fa-facebook"></i>
         </li>
         <li>
           <i className="fa fa-instagram"></i>
