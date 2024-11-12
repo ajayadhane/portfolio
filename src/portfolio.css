@@ -162,6 +162,15 @@ section {
 
 
 /* Home Section Style from here  */
+
+.fa-instagram {
+    color: #E1306C;
+}
+
+.fa-github {
+    color: #333333;
+}
+
 #homeSection {
     width: 100vw;
     min-height: calc(100vh - 70px);
@@ -467,7 +476,8 @@ section {
 
 
 /* footer css */
-body, .footer-container {
+body,
+.footer-container {
     overflow-x: hidden;
 }
 
@@ -588,5 +598,102 @@ body, .footer-container {
 
     .glass-card p {
         font-size: 0.9em;
+    }
+}
+
+/* ~about me css~  */
+#aboutME {
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: transparent;
+}
+
+.aboutME_card {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about_heading {
+    font-size: 2.5em;
+    text-align: center;
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 2px aqua;
+    background: linear-gradient(90deg, aqua, #00ffff, aqua);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientShift 5s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.about_heading::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10%;
+    height: 3px;
+    background-color: aqua;
+    transition: width 0.3s ease-in-out;
+}
+
+.about_heading:hover::after {
+    width: 18%;
+}
+
+.about_para {
+    padding: 15px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: aqua;
+    text-align: justify;
+}
+
+@media (max-width: 992px) {
+    .about_heading {
+        font-size: 2em;
+    }
+
+    .about_para {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .about_heading {
+        font-size: 1.8em;
+    }
+
+    .about_para {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .about_heading {
+        font-size: 1.6em;
+    }
+
+    .about_para {
+        font-size: 0.8em;
     }
 }
