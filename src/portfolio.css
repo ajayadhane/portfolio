@@ -13,8 +13,8 @@ html {
 }
 
 body {
-    height: 100%;
     width: 100%;
+    overflow-x: hidden !important;
     color: aqua;
     background: linear-gradient(to right, #06241b, #062424, #06241b);
 }
@@ -161,8 +161,6 @@ section {
 }
 
 
-/* Home Section Style from here  */
-
 .fa-instagram {
     color: #E1306C;
 }
@@ -172,7 +170,8 @@ section {
 }
 
 #homeSection {
-    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
     min-height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
@@ -265,7 +264,6 @@ section {
     }
 }
 
-/* resume button */
 .pushable {
     background: hsl(274, 80%, 58%);
     border: none;
@@ -301,7 +299,6 @@ section {
     outline: none;
 }
 
-/* Image Figure Styling */
 .profile {
     position: relative;
     width: 300px;
@@ -475,10 +472,8 @@ section {
 }
 
 
-/* footer css */
-body,
 .footer-container {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .footer-container {
@@ -601,7 +596,6 @@ body,
     }
 }
 
-/* ~about me css~  */
 #aboutME {
     margin: 0 auto;
     padding: 20px;
