@@ -1,14 +1,12 @@
 import React from "react";
 import { Element } from "react-scroll";
+import SkillCard from "./child_components/SkillCard";
 
 const Skills = () => {
   return (
-    <Element name="skills">
-      <section>
-        <h2>Skills Section</h2>
-        <p>This is the Skills section content.</p>
-      </section>
-    </Element>
+    <>
+      <SkillCard />
+    </>
   );
 };
 
